@@ -27,6 +27,7 @@ bool const Attaque::resoudreAttaque(Attaque &a){
         (J1 == 2 && J2 == 1)) {
         return true;
     }
+ 
     else {
         return false;
     }

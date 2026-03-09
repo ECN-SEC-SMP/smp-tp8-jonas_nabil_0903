@@ -29,8 +29,8 @@ public:
     Attaque const getAttaque();
     void setVivant(bool v);
     bool attaque(Animal &a);
-    virtual void setAttaque(Attaque &a);
-    virtual void deplace(int maxX, int maxY);
+    virtual void setAttaque(Attaque &a) = 0;
+    virtual void deplace(int maxX, int maxY) = 0;
 
 };
 

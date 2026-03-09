@@ -3,32 +3,32 @@ using namespace std;
 #include <stdlib.h>
 
 Animal::Animal(int maxX, int maxY){
-    x = rand() % maxX;
-    y = rand() % maxY;
+    this->x = rand() % maxX;
+    this->y = rand() % maxY;
 }
 
 Animal::Animal(int maxX, int maxY, int a, int b){
-    x = a % maxX;
-    y = b % maxY;
+    this->x = a % maxX;
+    this->y = b % maxY;
 }
 
 string const Animal::getNom(){
-    return nom;
+    return this->nom;
 }
 
 int const Animal::getX(){
-    return x;
+    return this->x;
 }
 
 int const Animal::getY(){
-    return y;
+    return this->y;
 }
 
 bool const Animal::getVivant(){
-    return vivant;
+    return this->vivant;
 }
 
 Attaque const Animal::getAttaque(){
-    return typeAttaque;
+    return this->typeAttaque;
 }
 
