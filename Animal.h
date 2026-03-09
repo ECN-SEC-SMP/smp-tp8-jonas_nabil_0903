@@ -32,7 +32,7 @@ public:
     bool attaque(Animal &a);
     
     // Méthodes virtuelles pures (à implémenter dans les classes filles)
-    virtual void setAttaque(Attaque atq) = 0;
+    virtual void setAttaque() = 0;
     virtual void deplace(int maxX, int maxY) = 0;
 };
 
