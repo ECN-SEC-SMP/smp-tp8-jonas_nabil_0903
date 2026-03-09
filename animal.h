@@ -32,7 +32,6 @@ public:
     virtual void setAttaque(Attaque &a);
     virtual void deplace(int maxX, int maxY);
 
-
 };
 
 #endif
