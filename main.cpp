@@ -166,6 +166,19 @@ int main() {
             break;
         }
 
+        // Vérifier s'il ne reste qu'un seul animal
+        if (vivants == 1) {
+            for (Animal* animal : animaux) {
+                if (animal->getVivant()) {
+                    cout << "\n*** VICTOIRE! Le " << animal->getNom()
+                         << " en position (" << animal->getX() << "," << animal->getY()
+                         << ") a gagné! ***\n" << endl;
+                    break;
+                }
+            }
+            break;
+        }
+
         // Demander si on continue
         cout << "Continuer? (o/n) : ";
         cin >> reponse;

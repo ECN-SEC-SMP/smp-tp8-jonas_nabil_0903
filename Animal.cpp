@@ -43,14 +43,22 @@ bool Animal::attaque(Animal &a){
   this->setAttaque();
   a.setAttaque();
 
+  // Affichage du combat
+  std::cout << "  Combat! " << this->nom << "(" << this->x << "," << this->y << ") avec "
+            << this->typeAttaque.getNomAttaque() << " VS "
+            << a.nom << "(" << a.x << "," << a.y << ") avec "
+            << a.typeAttaque.getNomAttaque() << " -> ";
+
   // Résolution du combat
   bool result = this->typeAttaque.resoudreAttaque(a.typeAttaque);
 
   // Le perdant meurt
   if (result) {
     a.setVivant(false);
+    std::cout << a.nom << " a perdu et meurt!" << std::endl;
   } else {
     this->setVivant(false);
+    std::cout << this->nom << " a perdu et meurt!" << std::endl;
   }
 
   return result;
